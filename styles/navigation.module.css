@@ -12,6 +12,10 @@
   transform: translateX(-50%);
 }
 
+.nav:hover {
+  opacity: 1;
+}
+
 .nav ul {
   display: flex;
   justify-content: space-between;
@@ -27,4 +31,8 @@
 
 .nav ul li:hover {
   transform: scale(1.05);
+}
+
+.scrolled {
+  opacity: 0.2;
 }

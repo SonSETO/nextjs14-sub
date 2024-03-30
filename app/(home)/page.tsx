@@ -7,7 +7,6 @@ export const metadata = {
 };
 
 async function getBooks() {
-  // const response = await fetch("https://books-api.nomadcoders.workers.dev/lists");
   const response = await fetch(API_URL);
   const json = await response.json();
   return json;
@@ -17,12 +16,14 @@ export default async function Homepage() {
   const books = await getBooks();
   return (
     <div>
-      <h1>THE NEW YORK TIMES BEST SELLER EXPLORER</h1>
+      <div className={styles.title}>
+        THE NEW YORK TIMES BEST SELLER EXPLORER
+      </div>
       <div className={styles.container}>
         {books.results.map((book) => (
           <div className={styles.contents} key={book.list_name_encoded}>
-            <Link href={`/list/${book.list_name_encoded}`}>
-              {book.display_name}
+            <Link href={`/books/${book.list_name_encoded}`}>
+              {book.display_name} &rarr;
             </Link>
           </div>
         ))}

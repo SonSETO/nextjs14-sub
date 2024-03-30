@@ -13,22 +13,22 @@ export default async function BookDetailInfo({ id }: { id: string }) {
   console.log(book);
   return (
     <>
-      <h3>{book.results.list_name}</h3>
-      <ul>
-        {book.results.books.map((b) => (
-          <li key={b.rank}>
-            <a href={b.amazon_product_url} title={b.title} target="_blank">
+      <div className={styles.title}>{book.results.list_name}</div>
+      <div className={styles.container}>
+        {book.results.books.map((i) => (
+          <div className={styles.contents} key={i.rank}>
+            <a href={i.amazon_product_url} title={i.title} target="_blank">
               <div>
-                <img src={b.book_image} alt={b.title} />
+                <img className={styles.img} src={i.book_image} alt={i.title} />
               </div>
               <div>
-                <p>{b.title}</p>
-                <p>Buy Now</p>
+                <p>{i.title}</p>
+                <p className={styles.text}>Buy Now</p>
               </div>
             </a>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </>
   );
 }
