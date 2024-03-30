@@ -21,8 +21,11 @@ export default async function BookDetailInfo({ id }: { id: string }) {
               <div>
                 <img className={styles.img} src={i.book_image} alt={i.title} />
               </div>
-              <div>
-                <p>{i.title}</p>
+              <div className={styles.text2}>
+                <div className={styles.text3}>{i.title}</div>
+                <div className={styles.text4}>{i.publisher}</div>
+                <div>{i.description}</div>
+                <div className={styles.text3}>rank : {i.rank} 🔥</div>
                 <p className={styles.text}>Buy Now</p>
               </div>
             </a>

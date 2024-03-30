@@ -13,7 +13,7 @@
   width: 80%;
   border: 1px solid #ccc;
   text-align: center;
-  opacity: 0.8;
+  opacity: 0.5;
   padding: 20px;
   border-radius: 8px;
   background-color: #f9f9f9;
@@ -41,10 +41,24 @@
   transition: color 0.3s ease;
 }
 
+.text2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.text3 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+.text4 {
+  color: tomato;
+  margin: 10px 0;
+}
+
 .text:hover {
   color: darkblue;
 }
-
 .img {
   width: 200px;
   height: 300px;
